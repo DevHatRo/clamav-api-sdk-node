@@ -23,7 +23,9 @@ vi.mock('@grpc/grpc-js', async () => {
     },
     loadPackageDefinition: vi.fn(() => ({
       clamav: {
-        ClamAVScanner: vi.fn(() => mockClient),
+        ClamAVScanner: vi.fn(function () {
+          return mockClient;
+        }),
       },
     })),
     Metadata: actual.Metadata,

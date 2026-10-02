@@ -3,7 +3,8 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: ['src/index.ts'],
   format: ['esm', 'cjs'],
-  dts: true,
+  // tsup injects baseUrl into the dts build, which TS 6 deprecates
+  dts: { compilerOptions: { ignoreDeprecations: '6.0' } },
   clean: true,
   splitting: false,
   sourcemap: true,
