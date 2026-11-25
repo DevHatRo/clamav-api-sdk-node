@@ -220,7 +220,7 @@ const result = await client.scanFile(buffer, 'file.pdf', {
 
 ### Prerequisites
 
-- Node.js >= 18
+- Node.js >= 22
 - pnpm
 - Docker (for integration tests)
 

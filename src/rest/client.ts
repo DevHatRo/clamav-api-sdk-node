@@ -70,7 +70,8 @@ export class ClamAVRestClient implements IClamAVClient {
       const buffer = resolved.buffer ?? (await streamToBuffer(resolved.stream));
 
       const formData = new FormData();
-      const blob = new Blob([buffer]);
+      // @types/node >=24 types Buffer over ArrayBufferLike; the cast avoids copying the file
+      const blob = new Blob([buffer as Uint8Array<ArrayBuffer>]);
       formData.append('file', blob, resolved.filename);
 
       const response = await this.fetch(
