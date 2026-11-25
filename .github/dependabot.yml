@@ -9,6 +9,11 @@ updates:
     groups:
       dependencies:
         patterns: ["*"]
+    ignore:
+      # typescript-eslint and tsup's dts build don't support TypeScript 7 yet
+      # (https://github.com/typescript-eslint/typescript-eslint/issues/10940)
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
