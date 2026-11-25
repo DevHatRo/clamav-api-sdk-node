@@ -54,19 +54,19 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.14.5",
+    "@grpc/grpc-js": "^1.14.7",
     "@grpc/proto-loader": "^0.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^22.19.11",
-    "@vitest/coverage-v8": "^5.0.3",
-    "eslint": "^10.11.0",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.1",
+    "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.9.9",
-    "tsup": "^8.5.1",
+    "prettier": "^3.10.1",
+    "tsup": "^9.0.0",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.71.0",
-    "vitest": "^5.0.3"
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.1"
   }
 }
